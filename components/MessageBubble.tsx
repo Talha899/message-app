@@ -15,6 +15,11 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
     minute: '2-digit' 
   });
 
+  // Check if message has userName (group chat messages show sender name)
+  const hasUserName = 'userName' in message && message.userName;
+  // Show sender name for messages from others in group chat
+  const showUserName = hasUserName && !isUser;
+
   return (
     <View style={[styles.container, isUser ? styles.userContainer : styles.assistantContainer]}>
       <View style={[
@@ -22,6 +27,9 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({ message }) => {
         isUser ? styles.userBubble : styles.assistantBubble,
         !isUser && Shadows.sm
       ]}>
+        {showUserName && (
+          <Text style={styles.userName}>{(message as any).userName}</Text>
+        )}
         <Text style={[styles.text, isUser ? styles.userText : styles.assistantText]}>
           {message.text}
         </Text>
@@ -115,6 +123,12 @@ const styles = StyleSheet.create({
   assistantTimestamp: {
     color: Colors.textSecondary,
     textAlign: 'left',
+  },
+  userName: {
+    fontSize: Typography.fontSize.sm,
+    fontWeight: Typography.fontWeight.semibold,
+    color: Colors.primary,
+    marginBottom: Spacing.xs,
   },
 });
 

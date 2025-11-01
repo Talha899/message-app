@@ -5,50 +5,64 @@
 import { Platform } from 'react-native';
 
 export const Colors = {
-  // Primary colors with gradients
-  primary: '#007AFF',
-  primaryDark: '#0051D5',
-  primaryLight: '#5AC8FA',
+  // Primary colors - Modern indigo gradient
+  primary: '#6366F1', // Indigo-500
+  primaryDark: '#4F46E5', // Indigo-600
+  primaryLight: '#818CF8', // Indigo-400
+  primaryGradient: ['#6366F1', '#4F46E5'],
   
-  // Background colors
-  background: '#F5F7FA',
-  backgroundDark: '#0A0E27',
+  // Background colors - Soft, professional
+  background: '#F8FAFC', // Slate-50
+  backgroundSecondary: '#F1F5F9', // Slate-100
+  backgroundDark: '#0F172A', // Slate-900
   surface: '#FFFFFF',
   surfaceLight: '#FAFBFC',
+  surfaceElevated: '#FFFFFF',
   
-  // Message bubble colors
-  userBubble: '#007AFF',
-  userBubbleGradient: ['#007AFF', '#0051D5'],
+  // Message bubble colors - Premium feel
+  userBubble: '#6366F1', // Indigo
+  userBubbleGradient: ['#6366F1', '#4F46E5'],
   assistantBubble: '#FFFFFF',
-  assistantBubbleBorder: '#E8ECEF',
+  assistantBubbleBorder: '#E2E8F0', // Slate-200
+  assistantBubbleShadow: 'rgba(15, 23, 42, 0.08)',
   
-  // Text colors
-  textPrimary: '#1D1D1F',
-  textSecondary: '#86868B',
-  textTertiary: '#ABABAB',
+  // Text colors - High contrast, readable
+  textPrimary: '#0F172A', // Slate-900
+  textSecondary: '#64748B', // Slate-500
+  textTertiary: '#94A3B8', // Slate-400
   textWhite: '#FFFFFF',
+  textInverse: '#FFFFFF',
   
-  // Status colors
-  success: '#34C759',
-  warning: '#FF9500',
-  error: '#FF3B30',
-  info: '#5AC8FA',
+  // Status colors - Modern, accessible
+  success: '#10B981', // Emerald-500
+  warning: '#F59E0B', // Amber-500
+  error: '#EF4444', // Red-500
+  info: '#3B82F6', // Blue-500
   
-  // Border and divider
-  border: '#E8ECEF',
-  divider: '#E5E5EA',
+  // Border and divider - Subtle
+  border: '#E2E8F0', // Slate-200
+  divider: '#E2E8F0',
+  borderLight: '#F1F5F9', // Slate-100
   
-  // Shadow colors
-  shadow: 'rgba(0, 0, 0, 0.1)',
-  shadowLight: 'rgba(0, 0, 0, 0.05)',
+  // Shadow colors - Layered depth
+  shadow: 'rgba(15, 23, 42, 0.1)',
+  shadowLight: 'rgba(15, 23, 42, 0.05)',
+  shadowMedium: 'rgba(15, 23, 42, 0.12)',
+  shadowStrong: 'rgba(15, 23, 42, 0.2)',
   
-  // Input colors
-  inputBackground: '#F8F9FA',
-  inputBorder: '#E8ECEF',
-  inputFocus: '#007AFF',
+  // Input colors - Clean, modern
+  inputBackground: '#FFFFFF',
+  inputBorder: '#E2E8F0',
+  inputFocus: '#6366F1',
+  inputPlaceholder: '#94A3B8',
   
   // Typing indicator
-  typingDot: '#999999',
+  typingDot: '#94A3B8',
+  
+  // Header colors
+  headerBackground: '#FFFFFF',
+  headerText: '#0F172A',
+  headerBorder: '#E2E8F0',
 };
 
 export const Spacing = {
